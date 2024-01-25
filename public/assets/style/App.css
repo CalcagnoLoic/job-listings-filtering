@@ -23,4 +23,8 @@
   .tag-wrapper {
     @apply self-center rounded bg-aquaHaze p-2;
   }
+
+  .wrapper-main-content {
+    @apply mx-6 md:mx-0 mt-6 flex w-[327px] flex-col rounded bg-white p-10 md:w-full lg:flex-row ;
+  }
 }
