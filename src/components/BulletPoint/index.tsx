@@ -5,14 +5,22 @@ interface BulletPoint {
   isFeatured: boolean;
 }
 
-const Component = ({ isNew, isFeatured }: BulletPoint) => (
+const Component: React.FC<BulletPoint> = ({ isNew, isFeatured }) => (
   <>
     {isNew && (
-      <Paragraph css="top-heading-wrapper bg-breakerBay" content="New!" />
+      <Paragraph
+        kind="p"
+        css="top-heading-wrapper bg-breakerBay"
+        content="New!"
+      />
     )}
 
     {isFeatured && (
-      <Paragraph css="top-heading-wrapper bg-outerSpace" content="Featured" />
+      <Paragraph
+        kind="p"
+        css="top-heading-wrapper bg-outerSpace"
+        content="Featured"
+      />
     )}
   </>
 );

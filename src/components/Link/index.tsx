@@ -3,7 +3,7 @@ interface Link {
   content: string;
 }
 
-const Component = ({ href, content }: Link) => (
+const Component: React.FC<Link> = ({ href, content }) => (
   <a href={href} target="_blank">
     {content}
   </a>

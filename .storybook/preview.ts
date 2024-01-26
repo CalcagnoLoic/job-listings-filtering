@@ -1,15 +1,11 @@
-import type { Preview } from '@storybook/react'
+import "../public/assets/style/style.css";
 
-const preview: Preview = {
+import DocumentationTemplate from "./DocumentationTemplate.mdx";
+
+export default {
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
-    controls: {
-      matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
-      },
+    docs: {
+      page: DocumentationTemplate,
     },
   },
 };
-
-export default preview;

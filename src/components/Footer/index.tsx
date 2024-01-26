@@ -4,6 +4,7 @@ import Paragraph from "../../typographies/Paragraph";
 const Component = () => (
   <>
     <Paragraph
+      kind="p"
       css="p-5 text-center text-outerSpace font-bold mt-5"
       content={
         <>

@@ -11,7 +11,8 @@
     "dev:design": "npx tailwindcss -i ./public/style/App.css -o ./dist/style/output.css --watch",
     "design": "npx tailwindcss -i ./public/style/App.css -o ./dist/style/output.css",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "dev:format": "prettier --write ."
   },
   "dependencies": {
     "react": "^18.2.0",
