@@ -6,7 +6,7 @@ type CompanyName = {
 
 const Component = ({ company }: CompanyName) => (
   <Paragraph
-    css="top-heading text-breakerBay md:text-[18px]"
+    css="top-heading text-[13px] text-breakerBay md:text-[18px]"
     content={company}
   />
 );

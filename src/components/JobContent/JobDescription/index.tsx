@@ -8,11 +8,11 @@ type JobDescription = {
 
 const Component = ({ postedAt, contract, location }: JobDescription) => (
   <div className="flex gap-3">
-    <span className="text-blueSmoke">{postedAt}</span>
+    <span className="text-blueSmoke font-semibold">{postedAt}</span>
     <Shape kindShape="round" />
-    <span className="text-blueSmoke">{contract}</span>
+    <span className="text-blueSmoke font-semibold">{contract}</span>
     <Shape kindShape="round" />
-    <span className="text-blueSmoke">{location}</span>
+    <span className="text-blueSmoke font-semibold">{location}</span>
   </div>
 );
 

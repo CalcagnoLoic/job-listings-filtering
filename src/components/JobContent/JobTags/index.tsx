@@ -8,7 +8,7 @@ type JobTags = {
 };
 
 const Component = ({ role, level, languages, tools }: JobTags) => (
-  <div className="flex flex-wrap gap-4 lg:flex-nowrap lg:justify-end">
+  <div className="flex flex-wrap gap-4 lg:flex-nowrap lg:justify-end ">
     <Tag content={role} />
     <Tag content={level} />
     {languages &&

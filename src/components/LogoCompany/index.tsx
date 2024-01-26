@@ -7,7 +7,7 @@ const Component = ({ logo, company }: LogoCompany) => (
   <img
     src={logo}
     alt={company}
-    className="mb-3 mr-6 h-[88px] w-[88px] self-start lg:self-center lg:mb-0"
+    className="top-5 mb-3 mr-6 h-12 w-12 self-start md:static md:h-[88px] md:w-[88px] lg:mb-0 lg:self-center"
   />
 );
 

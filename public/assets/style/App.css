@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: leagueSpartan;
+  src: url('../font/League_Spartan/static/LeagueSpartan-Regular.ttf');
+}
+
+@layer base {
+  body {
+    font-family: leagueSpartan
+  }
+}
+
 @layer components {
   .top-heading {
     @apply self-center text-sm font-bold;
@@ -21,10 +32,16 @@
     @apply font-bold text-breakerBay;
   }
   .tag-wrapper {
-    @apply self-center rounded bg-aquaHaze p-2;
+    @apply self-center rounded bg-aquaHaze p-2  duration-500 ease-out md:cursor-pointer;
+  }
+  .tag-wrapper:hover {
+    @apply md:bg-breakerBay;
+  }
+  .tag-wrapper:hover .tag {
+    @apply md:text-aquaHaze;
   }
 
   .wrapper-main-content {
-    @apply mx-6 md:mx-0 mt-6 flex w-[327px] flex-col rounded bg-white p-10 md:w-full lg:flex-row ;
+    @apply mx-6 mt-10 flex w-[327px] flex-col rounded bg-white p-5 shadow-xl md:mx-0 md:mt-6 md:w-full md:p-10 lg:flex-row;
   }
 }
