@@ -45,6 +45,6 @@
     @apply rounded-full px-2 py-1 text-sm font-bold uppercase text-white;
   }
   .wrapper-main-content {
-    @apply mx-6 mt-10 flex w-[327px] flex-col rounded bg-white p-5 shadow-xl md:mx-0 md:mt-6 md:w-full md:p-10 lg:flex-row;
+    @apply mx-6 mt-10 flex w-[325px] flex-col rounded bg-white p-5 shadow-xl md:mx-0 md:mt-6 md:w-full md:p-10 lg:flex-row;
   }
 }
