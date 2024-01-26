@@ -5,7 +5,7 @@ import Card from "../../components/Card";
 const JobsPage = () => (
   <div className="flex h-full flex-col justify-between bg-aquaSpring">
     <Header />
-    <main className="mx-auto mt-16">
+    <main className="mx-auto -mt-10">
       <Card />
     </main>
     <Footer />
