@@ -1,5 +1,5 @@
 import JobsPage from "./pages/JobsPage";
-import "../public/assets/style/App.css";
+import "../public/assets/style/style.css";
 
 const App = () => <JobsPage />;
 

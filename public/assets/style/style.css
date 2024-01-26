@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: leagueSpartan;
+  src: url("../font/League_Spartan/static/LeagueSpartan-Regular.ttf");
+}
+
+@layer base {
+  body {
+    font-family: leagueSpartan;
+  }
+}
+
+@layer components {
+  .job-description-text {
+    @apply font-semibold text-blueSmoke;
+  }
+  .line {
+    @apply my-5 h-[1px] w-full bg-blueSmoke lg:hidden;
+  }
+  .logo {
+    @apply top-5 mb-3 mr-6 h-12 w-12 self-start md:static md:h-[88px] md:w-[88px] lg:mb-0 lg:self-center;
+  }
+  .round {
+    @apply h-1 w-1 self-center rounded bg-blueSmoke;
+  }
+  .tag {
+    @apply font-bold text-breakerBay;
+  }
+  .tag-wrapper {
+    @apply self-center rounded bg-aquaHaze p-2  duration-500 ease-out md:cursor-pointer;
+  }
+  .tag-wrapper:hover {
+    @apply md:bg-breakerBay;
+  }
+  .tag-wrapper:hover .tag {
+    @apply md:text-aquaHaze;
+  }
+  .top-heading {
+    @apply self-center text-sm font-bold;
+  }
+  .top-heading-wrapper {
+    @apply rounded-full px-2 py-1 text-sm font-bold uppercase text-white;
+  }
+  .wrapper-main-content {
+    @apply mx-6 mt-10 flex w-[327px] flex-col rounded bg-white p-5 shadow-xl md:mx-0 md:mt-6 md:w-full md:p-10 lg:flex-row;
+  }
+}

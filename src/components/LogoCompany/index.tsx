@@ -3,12 +3,8 @@ interface LogoCompany {
   company: string;
 }
 
-const Component = ({ logo, company }: LogoCompany) => (
-  <img
-    src={logo}
-    alt={company}
-    className="mb-3 mr-6 h-[88px] w-[88px] self-start lg:self-center lg:mb-0"
-  />
+const Component: React.FC<LogoCompany> = ({ logo, company }) => (
+  <img src={logo} alt={company} className="logo" />
 );
 
 export default Component;

@@ -1,19 +1,20 @@
 import Tag from "../../Tag";
 
-type JobTags = {
+interface JobTags {
   role: string;
   level: string;
-  languages: string | Array;
-  tools: string | Array;
-};
+  languages: string | Array<string>;
+  tools?: string | Array<string>;
+}
 
-const Component = ({ role, level, languages, tools }: JobTags) => (
-  <div className="flex flex-wrap gap-4 lg:flex-nowrap lg:justify-end">
+const Component: React.FC<JobTags> = ({ role, level, languages, tools }) => (
+  <div className="flex flex-wrap gap-4 lg:flex-nowrap lg:justify-end ">
     <Tag content={role} />
     <Tag content={level} />
-    {languages &&
+    {Array.isArray(languages) &&
       languages.map((language: string) => <Tag content={language} />)}
-    {tools && tools.map((tool: string) => <Tag content={tool} />)}
+    {Array.isArray(tools) &&
+      tools.map((tool: string) => <Tag content={tool} />)}
   </div>
 );
 

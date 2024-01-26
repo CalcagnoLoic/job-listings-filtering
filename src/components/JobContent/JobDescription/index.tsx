@@ -1,18 +1,23 @@
+import Paragraph from "../../../typographies/Paragraph";
 import Shape from "../../Shape";
 
-type JobDescription = {
+interface JobDescription {
   postedAt: string;
   contract: string;
   location: string;
 }
 
-const Component = ({ postedAt, contract, location }: JobDescription) => (
+const Component: React.FC<JobDescription> = ({
+  postedAt,
+  contract,
+  location,
+}) => (
   <div className="flex gap-3">
-    <span className="text-blueSmoke">{postedAt}</span>
+    <Paragraph kind="span" css="job-description-text" content={postedAt} />
     <Shape kindShape="round" />
-    <span className="text-blueSmoke">{contract}</span>
+    <Paragraph kind="span" css="job-description-text" content={contract} />
     <Shape kindShape="round" />
-    <span className="text-blueSmoke">{location}</span>
+    <Paragraph kind="span" css="job-description-text" content={location} />
   </div>
 );
 

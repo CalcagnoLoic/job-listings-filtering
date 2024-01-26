@@ -13,10 +13,10 @@ const Component = () => {
   return (
     <>
       {data.map((item) => (
-        <CardLayout isFeatured={item.featured} id={item.id}>
+        <CardLayout isFeatured={item.featured} key={item.id}>
           <LogoCompany logo={item.logo} company={item.company} />
 
-          <div className="flex flex-col lg:w-full lg:flex-row lg:justify-between">
+          <div className="flex flex-col lg:w-full lg:flex-row lg:justify-between lg:gap-36">
             <div className="flex flex-col items-start">
               <div className="flex gap-5">
                 <JobCompany company={item.company} />
