@@ -26,3 +26,4 @@ dist-ssr
 design/
 README-template*
 style-guide*
+.venv/
