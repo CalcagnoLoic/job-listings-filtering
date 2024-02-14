@@ -1,8 +1,10 @@
 import argparse
+from subprocess import call
 from app import app
 
 
 def main():
+    call(["flask", "run", "--reload"])
     parser = argparse.ArgumentParser(description="Custom commands for Flask app")
     parser.add_argument("command", choices=["run"], help="Command to execute")
 

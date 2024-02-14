@@ -27,3 +27,4 @@ design/
 README-template*
 style-guide*
 .venv/
+__pycache__
