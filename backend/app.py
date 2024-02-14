@@ -5,7 +5,7 @@ from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 app.config["CORS_HEADERS"] = "Content-Type"
 
-cors = CORS(app, resources={r"/": {"origins": "http://localhost:5000/"}})
+cors = CORS(app, resources={r"/": {"origins": "http://127.0.0.1:5000/"}})
 
 
 @app.route("/")
