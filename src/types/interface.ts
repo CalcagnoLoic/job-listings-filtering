@@ -13,5 +13,5 @@ export interface itemProps {
   role: string;
   level: string;
   languages: string | string[];
-  tools: string | string[] | undefined;
+  tools?: string | string[] | undefined;
 }

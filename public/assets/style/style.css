@@ -9,7 +9,7 @@
 
 @layer base {
   body {
-    font-family: leagueSpartan;
+    @apply font-[leagueSpartan];
   }
 }
 
