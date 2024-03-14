@@ -1,4 +1,4 @@
-import data from "../../data/data.json";
+import { itemProps } from "../../types/interface";
 
 import BulletPoint from "../BulletPoint";
 import CardLayout from "../../layouts/CardLayout";
@@ -9,47 +9,44 @@ import JobTags from "../JobContent/JobTags";
 import LogoCompany from "../LogoCompany";
 import Shape from "../Shape";
 
-import FilterBox from "../FilterBox";
+type CardProps = {
+  item: itemProps;
+};
 
-const Component = () => {
+const Component = ({ item }: CardProps) => {
+  console.log(item);
+  
   return (
-    <>
-      <FilterBox />
-      {data.map((item) => (
-        <>
-          <CardLayout isFeatured={item.featured} key={item.id}>
-            <LogoCompany logo={item.logo} company={item.company} />
+    <CardLayout isFeatured={item.featured} key={item.id}>
+      <LogoCompany logo={item.logo} company={item.company} />
 
-            <div className="flex flex-col lg:w-full lg:flex-row lg:justify-between lg:gap-36">
-              <div className="flex flex-col items-start">
-                <div className="flex gap-5">
-                  <JobCompany company={item.company} />
+      <div className="flex flex-col lg:w-full lg:flex-row lg:justify-between lg:gap-36">
+        <div className="flex flex-col items-start">
+          <div className="flex gap-5">
+            <JobCompany company={item.company} />
 
-                  <BulletPoint isNew={item.new} isFeatured={item.featured} />
-                </div>
+            <BulletPoint isNew={item.new} isFeatured={item.featured} />
+          </div>
 
-                <Heading content={item.position} />
+          <Heading content={item.position} />
 
-                <JobDescription
-                  postedAt={item.postedAt}
-                  contract={item.contract}
-                  location={item.location}
-                />
-              </div>
+          <JobDescription
+            postedAt={item.postedAt}
+            contract={item.contract}
+            location={item.location}
+          />
+        </div>
 
-              <Shape kindShape="line" />
+        <Shape kindShape="line" />
 
-              <JobTags
-                role={item.role}
-                level={item.level}
-                languages={item.languages}
-                tools={item.tools}
-              />
-            </div>
-          </CardLayout>
-        </>
-      ))}
-    </>
+        <JobTags
+          role={item.role}
+          level={item.level}
+          languages={item.languages}
+          tools={item.tools}
+        />
+      </div>
+    </CardLayout>
   );
 };
 
